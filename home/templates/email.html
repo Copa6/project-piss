@@ -1,0 +1,15 @@
+{% load static %}
+<body style="background:#a5da69; color:#4b4b4b; font-size:18px; margin:0; font-family: nunito;">
+<div style="background:#b00b49">
+	<img src="http://piss.co.in{% static 'home/images/email_template_header.png' %}" alt="Welcome to PISS" style="margin-left: auto; margin-right: auto; display: block;" />
+</div>
+<div style="align-content: center;margin: 2%;">
+    <span> Use the activation code below to start reviewing your professors now. <br /><br /></span>
+    <div style="width: 90%;height: auto;margin: 0 auto; background:#aaf08c; letter-spacing:0.5em">
+        <p style="padding:5%; text-align:center; font-size: 36px; vertical-align:middle; line-height:inherit">
+            <strong>{{activation_code}}</strong>
+        </p>
+    </div>
+    <span><br /><br />Enjoy! <br /> -Team P.I.S.S</span>
+</div>
+</body>

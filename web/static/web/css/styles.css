@@ -1,0 +1,85 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-size: 1.5em;
+    background:#a5da69;
+    color:#4b4b4b;
+    margin:0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.row{
+    margin:0;
+}
+
+.main {
+    padding: 10px;
+}
+
+.overflow{
+    background: #b00b49;
+}
+
+.remove-margins {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.page-content {
+    margin-top: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.colored {
+    color: #b00b49;
+}
+
+.image-web {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+}
+
+.students-image {
+    padding:20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 0.7em;
+    }
+
+    .main {
+        padding: 4px;
+    }
+
+    .phone-screenshot {
+         width: 40%;
+    }
+}
+
+li {
+    padding: 10px;
+}
+
+.download-btn {
+    background: #b00b49;
+    border: #b00b49;
+    font-size: 1.2em;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.download-btn:hover {
+    background: #4a4a4a;
+}

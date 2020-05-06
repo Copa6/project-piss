@@ -1,0 +1,28 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block headerImage %} <img class="image-web" src="{% static 'web/images/Welcome.png' %}" alt="Welcome to PISS"/> {% endblock %}
+
+{% block bodycontent %}
+    <div class="col col-6">
+        <span class="bold"> A student's report card for Professors - <br /></span>
+        <ul>
+            <li>Rate your Professors in just a click</li>
+            <li>Read authentic reviews written by your peers</li>
+            <li>Always <span class="colored">anonymous</span></li>
+        </ul>
+        <div class="col col-3">
+            <img class="image-web students-image" src="{% static 'web/images/Students.png' %}" alt="Students discussing" />
+        </div>
+    </div>
+    <div class="col col-3">
+        <img class="image-web phone-screenshot" src="{% static 'web/images/Phone.png' %}" alt="PISS phone Screenshot" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 text-center">
+                <button type="button" class="btn btn-primary download-btn" href="https://play.google.com/store/apps/details?id=in.co.piss.www.piss&pageId=none">Download</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

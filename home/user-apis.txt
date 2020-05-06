@@ -1,0 +1,75 @@
+
+LOGIN_REQUIRED - Set auth - "[{"key":"Authorization","value":"JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwidXNlcm5hbWUiOiJUZXN0VXNlcjUiLCJleHAiOjE1MzI2MjIxMzAsImVtYWlsIjoidGVzdDVAZXhhbXBsZS5jb20iLCJvcmlnX2lhdCI6MTUzMjYxODUzMH0.75Cmmb6gdxHhlMqdwfaig3hrRgk35RheAKV_lz7PzIM","description":"","enabled":true}]"
+
+1) Register user - POST
+    Endpoint to register a user to the site.
+    url - auth/users/create/
+    body - {
+          "username": "TestUser5",
+          "password": "P@ssw0rd",
+          "email":"test5@example.com"
+        }
+    response - {
+                    "email": "test5@example.com",
+                    "username": "TestUser5",
+                    "id": 10
+                }
+
+2) Login - POST
+    login/
+    body - {"username": "TestUser5", "password": "P@ssw0rd" }
+    response - {
+        "token": "eyJ0eXAiOJKV1QiLCJhbGciOiJIUzIzAsImVtYWlsIjoidGVzdDVAZXhhbXBsZSb6gdxHhlMqdwfaig3hrRgk35RheAKV_lz7PzIM",
+        "user": 1,
+        "username": "Test06",
+        "email": "testuser1@example.com",
+        "profile": {
+            "college": null,
+            "degree": "MSc",
+            "passing_year": 2018,
+            "number_reviews": 0,
+            "id": 1
+        }
+
+    }
+
+3) Refresh login - POST
+    LOGIN_REQUIRED
+
+    url - /auth/jwt/refresh/
+
+    body - {
+        "token": "eyJ0eXAiOJKV1QiLCJhbGciOiJIUzIzAsImVtYWlsIjoidGVzdDVAZXhhbXBsZSb6gdxHhlMqdwfaig3hrRgk35RheAKV_lz7PzIM"
+    }
+    response - {
+        "token": "eyJ0eXAiOJKV1QiLCJhbGciOiJIUzIzAsImVtYWlsIjoidGVzdDVAZXhhbXBsZSb6gdxHhlMqdwfaig3hrRgk35RheAKV_lz7PzIM",
+        "user": 1,
+        "username": "Test06",
+        "email": "testuser1@example.com",
+        "profile": {
+            "college": null,
+            "degree": "MSc",
+            "passing_year": 2018,
+            "number_reviews": 0,
+            "id": 1
+        }
+    }
+
+4) User details - GET
+    LOGIN_REQUIRED
+    Endpoint to get user details
+
+    url - auth/users/me/
+    auth - "[{"key":"Authorization","value":"JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwidXNlcm5hbWUiOiJUZXN0VXNlcjUiLCJleHAiOjE1MzI2MjIxMzAsImVtYWlsIjoidGVzdDVAZXhhbXBsZS5jb20iLCJvcmlnX2lhdCI6MTUzMjYxODUzMH0.75Cmmb6gdxHhlMqdwfaig3hrRgk35RheAKV_lz7PzIM","description":"","enabled":true}]"
+    response - {
+            "email": "test5@example.com",
+            "id": 10,
+            "username": "TestUser5"
+            }
+
+5) user profile - POST
+    user/create_profile
+    request - {
+            "degree": "BE",
+            "passing_year": 2018
+        }
